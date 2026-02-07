@@ -1,0 +1,82 @@
+/* Base Reset */
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:Arial,sans-serif;line-height:1.6;color:#333;transition:0.3s;}
+a{text-decoration:none;color:inherit;}
+
+/* Header */
+header{background:#222;color:#fff;padding:1rem 2rem;position:sticky;top:0;z-index:1000;}
+nav{display:flex;justify-content:space-between;align-items:center;}
+nav ul{list-style:none;display:flex;gap:1rem;}
+nav ul li a{color:#fff;transition:color 0.3s;}
+nav ul li a:hover{color:#1e90ff;}
+#theme-toggle{background:none;border:none;color:#fff;cursor:pointer;font-size:1.2rem;}
+
+/* Hero */
+#hero{text-align:center;padding:6rem 2rem;background:#f4f4f4;}
+#hero h2{font-size:2.5rem;}
+.btn{display:inline-block;margin-top:1rem;padding:0.5rem 1.5rem;background:#222;color:#fff;border-radius:5px;}
+.btn:hover{background:#1e90ff;}
+
+/* Sections */
+section{padding:4rem 2rem;max-width:1000px;margin:auto;}
+
+/* Projects */
+.project-list{display:flex;flex-wrap:wrap;gap:2rem;justify-content:center;}
+.project-card{flex:1 1 300px;border:1px solid #ccc;border-radius:8px;text-align:center;transition:0.3s;}
+.project-card img{width:100%;}
+.project-card:hover{transform:translateY(-5px);box-shadow:0 10px 20px rgba(0,0,0,0.2);}
+.project-card button{margin:0.5rem;padding:0.3rem 0.8rem;background:#1e90ff;color:#fff;border:none;border-radius:4px;cursor:pointer;}
+
+/* Skills */
+.skill{margin-bottom:1rem;}
+.skill span{display:block;font-weight:bold;margin-bottom:0.3rem;}
+.skill-bar{background:#ddd;border-radius:20px;overflow:hidden;}
+.skill-bar div{height:15px;background:#1e90ff;width:0;transition:width 1s;}
+
+/* Contact */
+form{display:flex;flex-direction:column;gap:1rem;}
+form input,form textarea{padding:0.5rem;border-radius:5px;border:1px solid #ccc;width:100%;}
+form button{padding:0.5rem;border:none;border-radius:5px;background:#1e90ff;color:#fff;cursor:pointer;}
+form button:hover{background:#0d6efd;}
+#form-message{color:green;font-weight:bold;}
+
+/* Footer */
+footer{text-align:center;padding:2rem;background:#222;color:#fff;}
+
+/* Dark Mode */
+body.dark{background:#121212;color:#ddd;}
+body.dark header{background:#000;}
+body.dark #hero{background:#1c1c1c;}
+body.dark .project-card{border-color:#333;}
+body.dark .skill-bar{background:#333;}
+body.dark .skill-bar div{background:#1e90ff;}
+body.dark footer{background:#000;}
+body.dark .modal-content{background:#1c1c1c;color:#ddd;}
+
+/* Modal */
+.modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;overflow:auto;background:rgba(0,0,0,0.7);}
+.modal-content{background:#fff;margin:5% auto;padding:2rem;border-radius:10px;width:90%;max-width:700px;position:relative;text-align:center;overflow:auto;max-height:90%;}
+.modal .close{position:absolute;top:10px;right:15px;font-size:1.5rem;cursor:pointer;color:#333;}
+
+/* Project 1 */
+#options{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
+.color-btn{padding:0.5rem 1rem;border:none;border-radius:8px;color:#fff;cursor:pointer;transition:0.2s;}
+.color-btn:hover{transform:scale(1.1);}
+
+/* Project 2 Modern Site */
+#project2-site header{background:linear-gradient(90deg,#1e90ff,#0d6efd);color:#fff;padding:1rem;border-radius:8px;}
+#project2-site .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;margin-top:1rem;}
+#project2-site .service-card{padding:1rem;background:#f4f4f4;border-radius:8px;box-shadow:0 5px 10px rgba(0,0,0,0.1);transition:0.3s;}
+#project2-site .service-card:hover{transform:translateY(-5px);}
+#project2-site footer{margin-top:2rem;padding:1rem;background:#1e90ff;color:#fff;border-radius:8px;}
+
+/* Project 3 Quiz */
+#quiz-app{display:flex;flex-direction:column;align-items:center;}
+#quiz-app .question{margin-bottom:1rem;font-weight:bold;}
+#quiz-app .options{display:flex;flex-direction:column;gap:0.5rem;}
+#quiz-app button.option-btn{padding:0.5rem 1rem;border:none;border-radius:5px;background:#1e90ff;color:#fff;cursor:pointer;transition:0.3s;}
+#quiz-app button.option-btn:hover{background:#0d6efd;}
+#quiz-app #score{margin-top:1rem;font-weight:bold;}
+
+/* Responsive */
+@media(max-width:768px){nav ul{flex-direction:column;background:#222;position:absolute;top:60px;right:0;width:200px;display:none;}nav ul.show{display:flex;}#hero h2{font-size:2rem;}}
